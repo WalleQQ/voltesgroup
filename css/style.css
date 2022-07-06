@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 2 versions,not dead,not ie < 11
+*/
+
 @font-face {
   font-family: 'Gilroy';
   font-style: normal;
@@ -49,6 +56,7 @@ p {
   border: 0;
   padding: 0;
   white-space: nowrap;
+  -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -68,7 +76,11 @@ p {
   margin: 0;
   padding: 0;
   min-height: 100%;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-rows: -webkit-min-content 1fr -webkit-min-content;
+  -ms-grid-rows: min-content 1fr min-content;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -80,7 +92,7 @@ p {
 }
 
 .page-header {
-  background-image: linear-gradient(to right bottom, #4b68c5, #4b90c5);
+  background: linear-gradient(162deg, #0d1d71, #1799c4);
   padding: 30px 0 100px 0;
 }
 
@@ -107,6 +119,7 @@ p {
 
 .page-header__content-text {
   font-size: 45px;
+  line-height: 100%;
   color: #ffffff;
 }
 
@@ -114,11 +127,13 @@ p {
   position: relative;
   font-family: 'Gilroy-Bold', 'Arial', sans-serif;
   font-size: 45px;
-  line-height: 45px;
-  background-image: linear-gradient(to right bottom, #4b68c5, #4b90c5);
+  line-height: 100%;
+  background: linear-gradient(162deg, #0d1d71, #1799c4);
   color: #ffffff;
   padding: 50px 30px 30px 30px;
   margin-bottom: 30px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
   width: min-content;
   text-transform: uppercase;
 }
@@ -142,7 +157,7 @@ p {
   height: 10px;
   bottom: 0;
   left: 0;
-  background-image: linear-gradient(to right bottom, #4b68c5, #4b90c5);
+  background: linear-gradient(162deg, #0d1d71, #1799c4);
 }
 
 .services {
@@ -162,7 +177,7 @@ p {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
   width: 196px;
   min-height: 150px;
   padding: 15px 30px;
@@ -192,14 +207,29 @@ p {
 }
 
 .company__content-item-img-container {
+  position: relative;
   box-sizing: border-box;
-  width: 150px;
-  height: 150px;
+  width: 148px;
+  height: 148px;
   border: 2px solid #4b68c5;
+  background-color: #ffffff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.company__content-item-img-container::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(162deg, #0d1d71, #1799c4);
 }
 
 .company__content-item-title {
@@ -241,13 +271,14 @@ p {
 
 .road-transport__content-transport-title {
   text-transform: uppercase;
-  color: #4b68c5;
+  color: #1f3695;
 }
 
 .road-transport__content-transport-list {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
+  -moz-column-gap: 50px;
   column-gap: 50px;
   row-gap: 30px;
 }
@@ -257,8 +288,9 @@ p {
 }
 
 .road-transport__content-info {
+  -ms-grid-row-align: stretch;
   align-self: stretch;
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
   padding: 30px 20px;
 }
 
@@ -281,7 +313,7 @@ p {
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  background-color: #4b68c5;
+  background: linear-gradient(162deg, #0d1d71, #1799c4);
   border-radius: 50%;
 }
 
@@ -293,7 +325,7 @@ p {
   transform: translateY(-50%);
   width: 26px;
   height: 26px;
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
   border-radius: 50%;
 }
 
@@ -318,7 +350,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
   row-gap: 10px;
 }
 
@@ -338,6 +370,7 @@ p {
 .multimodal__content-title {
   font-family: 'Gilroy-Bold', 'Arial', sans-serif;
   font-size: 30px;
+  line-height: 100%;
   text-transform: uppercase;
   margin-bottom: 15px;
   width: 470px;
@@ -372,7 +405,7 @@ p {
   transform: translateY(-50%);
   width: 15px;
   height: 15px;
-  background-color: #4b68c5;
+  background: linear-gradient(162deg, #0d1d71, #1799c4);
   border-radius: 50%;
 }
 
@@ -383,13 +416,13 @@ p {
   height: 100%;
   align-self: flex-start;
   max-width: 200px;
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
   padding: 30px 20px;
 }
 
 .multimodal__content-countries-heading {
   font-family: 'Gilroy-Bold', 'Arial', sans-serif;
-  color: #4b68c5;
+  color: #1f3695;
   text-transform: uppercase;
   margin-bottom: 50px;
 }
@@ -413,7 +446,7 @@ p {
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  background-color: #4b68c5;
+  background: linear-gradient(162deg, #0d1d71, #1799c4);
   border-radius: 50%;
 }
 
@@ -425,7 +458,7 @@ p {
   transform: translateY(-50%);
   width: 26px;
   height: 26px;
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
   border-radius: 50%;
 }
 
@@ -434,13 +467,16 @@ p {
 }
 
 .railway__content {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 50px 1fr;
   grid-template-columns: auto 1fr;
+  -moz-column-gap: 50px;
   column-gap: 50px;
 }
 
 .railway__content-description {
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
   padding: 30px 30px;
   max-width: 300px;
 }
@@ -450,6 +486,7 @@ p {
   font-family: 'Gilroy-Bold', 'Arial', sans-serif;
   margin-bottom: 30px;
   font-size: 25px;
+  line-height: 100%;
 }
 
 .railway__content-description-list {
@@ -471,7 +508,7 @@ p {
   transform: translateY(-50%);
   width: 30px;
   height: 30px;
-  background-color: #4b68c5;
+  background: linear-gradient(162deg, #0d1d71, #1799c4);
   border-radius: 50%;
 }
 
@@ -483,7 +520,7 @@ p {
   transform: translateY(-50%);
   width: 26px;
   height: 26px;
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
   border-radius: 50%;
 }
 
@@ -495,6 +532,7 @@ p {
   text-transform: uppercase;
   font-family: 'Gilroy-Bold', 'Arial', sans-serif;
   font-size: 25px;
+  line-height: 100%;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -502,6 +540,7 @@ p {
 .railway__content-kinds-text {
   text-align: center;
   font-size: 20px;
+  line-height: 100%;
   margin-bottom: 30px;
 }
 
@@ -523,12 +562,12 @@ p {
 }
 
 .avia {
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
   padding-bottom: 100px;
 }
 
 .avia .title::before {
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
 }
 
 .avia__heading-wrapper {
@@ -580,7 +619,7 @@ p {
   z-index: 1;
   width: 120px;
   height: 120px;
-  background-color: #4b68c5;
+  background: linear-gradient(162deg, #0d1d71, #1799c4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -640,7 +679,7 @@ p {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #4b68c5;
+  background: linear-gradient(162deg, #0d1d71, #1799c4);
 }
 
 .cooperation__list::after {
@@ -660,7 +699,7 @@ p {
 }
 
 .cooperation__item {
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
   padding: 15px;
   max-width: 500px;
 }
@@ -682,16 +721,19 @@ p {
 
 .cooperation__contacts-link {
   font-size: 50px;
-  color: #4b68c5;
+  line-height: 100%;
+  color: #1f3695;
 }
 
 .page-footer {
   padding: 100px 0;
-  background-color: #4b9ec5;
+  background-color: #90cfe0;
 }
 
 .page-footer__content-wrapper {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 30px 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   margin-bottom: 50px;
@@ -699,13 +741,16 @@ p {
 
 .page-footer__content-copyright {
   max-width: 600px;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
   grid-column: 1 / 2;
 }
 
 .page-footer__content-text {
   font-family: 'Gilroy-Bold', 'Arial', sans-serif;
   font-size: 50px;
-  color: #4b68c5;
+  line-height: 100%;
+  color: #1f3695;
 }
 
 .page-footer__contacts-wrapper {
@@ -720,14 +765,14 @@ p {
   font-family: 'Gilroy-Bold', 'Arial', sans-serif;
   font-size: 40px;
   line-height: 40px;
-  color: #4b68c5;
+  color: #1f3695;
 }
 
 .page-footer__contacts-address {
   font-family: 'Gilroy-Bold', 'Arial', sans-serif;
   font-size: 40px;
   line-height: 40px;
-  color: #4b68c5;
+  color: #1f3695;
   font-style: normal;
 }
 
