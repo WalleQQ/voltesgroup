@@ -4,15 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Сайт логистической компании Voltes-Group"
+    />
+    <title>Voltes-Group</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Voltes-Group</title>
+    <link
+      rel="preload"
+      href="fonts/Gilroy-Medium.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="fonts/Gilroy-Bold.woff2"
+      type="font/woff2"
+      as="font"
+      crossorigin="anonymous"
+    />
   </head>
   <body class="page-body">
     <header class="page-header">
       <h1 class="hidden">Voltes-Group</h1>
       <div class="wrapper">
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--noJs">
+          <div class="main-nav__toggle">
+            <span class="hidden">Открыть меню</span>
+            <span class="main-nav__toggle-item"></span>
+          </div>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__item-link" href="#services">Наши услуги</a>
@@ -30,7 +52,7 @@
         <div class="page-header__content">
           <img
             class="page-header__content-img"
-            src="img/free-icon-globe-664624.png"
+            src="img/logo.png"
             alt="Логотип voltesgroup"
             width="300"
             height="300"
@@ -129,7 +151,7 @@
             <li class="services__item">
               <img
                 class="services__item-image"
-                src="img/premium-icon-box-1044177.png"
+                src="img/services-item-9.png"
                 alt="Изображение груза"
                 width="80"
                 height="80"
@@ -175,7 +197,7 @@
           <div class="company__content">
             <img
               class="company__content-img"
-              src="img/free-icon-globe-664624.png"
+              src="img/company-logo.png"
               alt="Логотип voltesgroup"
               width="200"
               height="200"
@@ -240,7 +262,7 @@
                 <div class="company__content-item-img-container">
                   <img
                     class="company__content-item-img"
-                    src="img/free-icon-import-2083015.png"
+                    src="img/company-item.png"
                     alt="иконка"
                     width="80"
                     height="80"
@@ -265,7 +287,7 @@
           <div class="company__content">
             <img
               class="company__content-img"
-              src="img/free-icon-globe-664624.png"
+              src="img/company-logo.png"
               alt="Логотип voltesgroup"
               width="200"
               height="200"
@@ -329,7 +351,7 @@
                 <div class="company__content-item-img-container">
                   <img
                     class="company__content-item-img"
-                    src="img/free-icon-import-2083015.png"
+                    src="img/company-item.png"
                     alt="иконка"
                     width="80"
                     height="80"
@@ -351,23 +373,21 @@
       <section class="road-transport">
         <div class="wrapper">
           <h2 class="road-transport__title title">Автомобильные перевозки</h2>
+          <h3 class="road-transport__heading">Ваш груз в надежных руках</h3>
           <div class="road-transport__content">
             <div class="road-transport__content-transport">
-              <h3 class="road-transport__content-transport-title">
-                Ваш груз в надежных руках
-              </h3>
               <ul class="road-transport__content-transport-list">
                 <li class="road-transport__content-transport-item">
                   <img
                     class="road-transport__content-transport-item-img"
-                    src="img/free-icon-truck-819438.png"
+                    src="img/road-transport/road-transport-item-1.png"
                     alt="Изображение грузового автомобиля"
                     width="200"
                     height="200"
                   />
-                  <h3 class="road-transport__content-transport-item-title">
+                  <p class="road-transport__content-transport-item-title">
                     Еврофуры
-                  </h3>
+                  </p>
                   <p class="road-transport__content-transport-item-text">
                     20 тонн
                   </p>
@@ -375,14 +395,14 @@
                 <li class="road-transport__content-transport-item">
                   <img
                     class="road-transport__content-transport-item-img"
-                    src="img/free-icon-truck-819438.png"
+                    src="img/road-transport/road-transport-item-2.png"
                     alt="Изображение грузового автомобиля"
                     width="200"
                     height="200"
                   />
-                  <h3 class="road-transport__content-transport-item-title">
+                  <p class="road-transport__content-transport-item-title">
                     Десятитонники
-                  </h3>
+                  </p>
                   <p class="road-transport__content-transport-item-text">
                     10 тонн
                   </p>
@@ -390,14 +410,14 @@
                 <li class="road-transport__content-transport-item">
                   <img
                     class="road-transport__content-transport-item-img"
-                    src="img/free-icon-truck-819438.png"
+                    src="img/road-transport/road-transport-item-3.png"
                     alt="Изображение грузового автомобиля"
                     width="200"
                     height="200"
                   />
-                  <h3 class="road-transport__content-transport-item-title">
+                  <p class="road-transport__content-transport-item-title">
                     Пятитонники
-                  </h3>
+                  </p>
                   <p class="road-transport__content-transport-item-text">
                     5 тонн
                   </p>
@@ -405,14 +425,14 @@
                 <li class="road-transport__content-transport-item">
                   <img
                     class="road-transport__content-transport-item-img"
-                    src="img/free-icon-truck-819438.png"
+                    src="img/road-transport/road-transport-item-4.png"
                     alt="Изображение грузового автомобиля"
                     width="200"
                     height="200"
                   />
-                  <h3 class="road-transport__content-transport-item-title">
+                  <p class="road-transport__content-transport-item-title">
                     Газели
-                  </h3>
+                  </p>
                   <p class="road-transport__content-transport-item-text">
                     3 тонны
                   </p>
@@ -420,14 +440,14 @@
                 <li class="road-transport__content-transport-item">
                   <img
                     class="road-transport__content-transport-item-img"
-                    src="img/free-icon-truck-819438.png"
+                    src="img/road-transport/road-transport-item-5.png"
                     alt="Изображение грузового автомобиля"
                     width="200"
                     height="200"
                   />
-                  <h3 class="road-transport__content-transport-item-title">
+                  <p class="road-transport__content-transport-item-title">
                     Для опасных грузов
-                  </h3>
+                  </p>
                   <p class="road-transport__content-transport-item-text">
                     20 тонн
                   </p>
@@ -435,14 +455,14 @@
                 <li class="road-transport__content-transport-item">
                   <img
                     class="road-transport__content-transport-item-img"
-                    src="img/free-icon-truck-819438.png"
+                    src="img/road-transport/road-transport-item-6.png"
                     alt="Изображение грузового автомобиля"
                     width="200"
                     height="200"
                   />
-                  <h3 class="road-transport__content-transport-item-title">
+                  <p class="road-transport__content-transport-item-title">
                     Для негабаритных грузов
-                  </h3>
+                  </p>
                   <p class="road-transport__content-transport-item-text">
                     120 тонн
                   </p>
@@ -832,7 +852,7 @@
               <div class="avia__item-img-container">
                 <img
                   class="avia__item-img"
-                  src="img/free-icon-analytic-graph-6354312.png"
+                  src="img/premium-icon-professional-1900194.png"
                   alt="иконка"
                   width="80"
                   height="80"
@@ -910,6 +930,7 @@
             <a
               class="cooperation__contacts-link"
               href="mailto:info@voltesgroup.ru"
+              aria-label="Написать на почту info@voltesgroup.ru"
               >info@voltesgroup.ru</a
             >
           </div>
@@ -921,7 +942,7 @@
         <div class="page-footer__content-wrapper">
           <img
             class="page-footer__content-img"
-            src="img/free-icon-globe-664624.png"
+            src="img/company-logo.png"
             alt="Логотип voltesgroup"
             width="300"
             height="300"
@@ -933,10 +954,16 @@
           <p class="page-footer__content-text">ОТ ИДЕИ ДО РЕЗУЛЬТАТА!</p>
         </div>
         <div class="page-footer__contacts-wrapper">
-          <a class="page-footer__contacts-link" href="tel:88005003988"
+          <a
+            class="page-footer__contacts-link"
+            href="tel:88005003988"
+            aria-label="Позвонить по номеру телефона 88005003988"
             >8 (800) 500-39-88</a
           >
-          <a class="page-footer__contacts-link" href="tel:84995203988"
+          <a
+            class="page-footer__contacts-link"
+            href="tel:84995203988"
+            aria-label="Позвонить по номеру телефона 84995203988"
             >8 (499) 520-39-88</a
           >
           <address class="page-footer__contacts-address">
@@ -958,5 +985,6 @@
         </ul>
       </div>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
